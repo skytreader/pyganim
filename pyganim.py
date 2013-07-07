@@ -496,7 +496,7 @@ class PygAnimation(object):
         argument for jump.
         Negative values have the same effect as calling prevFrame()
         """
-        self.setFrameNum(self.currentFrameNum + int(jump))
+        self.currentFrameNum = (self.currentFrameNum + int(jump))
 
 
     def prevFrame(self, jump=1):
@@ -506,7 +506,7 @@ class PygAnimation(object):
         argument for jump.
         Negative values have the same effect as calling nextFrame()
         """
-        self.setFrameNum(self.currentFrameNum - int(jump))
+        self.currentFrameNum = (self.currentFrameNum - int(jump))
 
     @property
     def currentFrameNum(self):
